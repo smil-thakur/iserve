@@ -16,6 +16,7 @@ class SpecialPage extends StatelessWidget {
           Container(
             child: Image.asset("assets/images/bg image.png", fit: BoxFit.fill),
             height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
           ),
           Container(
             height: MediaQuery.of(context).size.height,

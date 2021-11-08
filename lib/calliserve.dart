@@ -28,7 +28,7 @@ class _CallState extends State<Call> {
       body: Stack(
         children: [
           Container(
-            child: Image.asset("assets/images/bgi.png"),
+            child: Center(child: Image.asset("assets/images/bgi.png")),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -16,6 +16,7 @@ class MenuPage extends StatelessWidget {
               fit: BoxFit.fill,
             ),
             height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
           ),
           Container(
             height: MediaQuery.of(context).size.height,
