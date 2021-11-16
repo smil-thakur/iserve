@@ -1,48 +1,52 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:iserve/routes.dart';
+import 'package:iserve/splash.dart';
 
-class First extends StatelessWidget {
+class First extends StatefulWidget {
   const First({Key? key}) : super(key: key);
+
+  @override
+  State<First> createState() => _FirstState();
+}
+
+class _FirstState extends State<First> {
+  void initState() {
+    super.initState();
+    _navigatetologin();
+  }
+
+  _navigatetologin() async {
+    await Future.delayed(Duration(milliseconds: 2500), () {});
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => Splash()));
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset("assets/images/logo 1.png"),
-            Text(
-              "iSERVE",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, Myroutes.splash);
-              },
-              child: Container(
-                width: 200,
-                height: 200,
-                child: Center(
-                  child: Text(
-                    "QR",
-                    style: TextStyle(
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold,
-                        color: const Color(0xff592222)),
-                  ),
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset("assets/images/logo 1.png"),
+                Text(
+                  "iSERVE",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
                 ),
-                decoration: BoxDecoration(
-                    border:
-                        Border.all(width: 5, color: const Color(0xff592222)),
-                    borderRadius: BorderRadius.circular(20)),
-              ),
-            )
-          ],
+                Container(
+                  margin: EdgeInsets.only(top: 100),
+                  child: LinearProgressIndicator(
+                    color: Colors.yellow,
+                    backgroundColor: Colors.blue,
+                  ),
+                  width: 200,
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );

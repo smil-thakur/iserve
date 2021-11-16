@@ -493,12 +493,12 @@ class _PizzaPageState extends State<PizzaPage> {
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, Myroutes.waiting);
+                        Navigator.pushNamed(context, Myroutes.cart);
                       },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "   Confirm Order",
+                          "   Add to Cart",
                           style: GoogleFonts.openSans(
                               fontSize: 15, color: Colors.white),
                         ),
@@ -508,7 +508,7 @@ class _PizzaPageState extends State<PizzaPage> {
                       padding: const EdgeInsets.all(8.0),
                       child: InkWell(
                         onTap: () {
-                          Navigator.pushNamed(context, Myroutes.waiting);
+                          Navigator.pushNamed(context, Myroutes.cart);
                         },
                         child: Icon(
                           Icons.navigate_next,
