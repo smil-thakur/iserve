@@ -11,4 +11,5 @@ class Myroutes {
   static String checkout = "/check";
   static String payment = "/payment";
   static String last = "/last";
+  static String cart = "/cart";
 }

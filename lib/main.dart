@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iserve/calling.dart';
 import 'package:iserve/calliserve.dart';
+import 'package:iserve/cart.dart';
 import 'package:iserve/checkout.dart';
 
 import 'package:iserve/first.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: Myroutes.first,
+      initialRoute: Myroutes.pizza,
       routes: {
         Myroutes.first: (context) => First(),
         Myroutes.home: (context) => Home(),
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         Myroutes.checkout: (context) => CheckOut(),
         Myroutes.payment: (context) => PaymentPage(),
         Myroutes.last: (context) => LastPage(),
+        Myroutes.cart: (context) => Cart(),
       },
     );
   }
